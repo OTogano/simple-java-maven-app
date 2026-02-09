@@ -76,7 +76,7 @@ tools {
             agent {label 'ProdServer'}
             steps
             {
-                timeout(time:5, units:'DAYS'){
+                timeout(time:5, unit:'DAYS'){
                     input message: 'Deployment approved?'
                 dir("/var/www/html"){
                     unstash "maven-build"
