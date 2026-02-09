@@ -29,13 +29,13 @@ tools {
                 stage('testA')
                 {
                     steps{
-                    echo 'This is test A'
+                    echo "This is test A"
                     }
                 }
                 stage('testB')
                 {
                     steps{
-                    echo 'This is test B's
+                    echo "This is test B"
                     }
                 }
             }
