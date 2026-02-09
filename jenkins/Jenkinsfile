@@ -44,8 +44,8 @@ tools {
             }
             post {
                 success {
-                    dir("webapp/target/"){
-                        stash name: "maven-build", includes: "*.war"
+                    dir("target/"){
+                        stash name: "maven-build", includes: "*.jar"
                     }
                 }
             }
@@ -61,7 +61,7 @@ tools {
                 }
                 sh """
                 cd /var/www/html/
-                jar -xvf webapp.war
+                jar -xvf webapp.jar
                 """
             }
         }
