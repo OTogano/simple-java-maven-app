@@ -61,7 +61,7 @@ tools {
                 }
                 sh """
                 cd /var/www/html/
-                jar -xvf webapp.jar
+                jar -xvf webapp.war
                 """
             }
         }
