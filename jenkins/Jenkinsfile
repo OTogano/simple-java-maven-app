@@ -21,6 +21,24 @@ tools {
                 echo "hello $NAME ${params.LASTNAME}"
             }
 
+        }
+        stage('test')
+        {
+            parallel
+            {
+                stage('testA')
+                {
+                    steps{
+                    echo 'This is test A'
+                    }
+                }
+                stage('testB')
+                {
+                    steps{
+                    echo 'This is test B's
+                    }
+                }
+            }
             post {
                 success {
                     archiveArtifacts artifacts: '**'
